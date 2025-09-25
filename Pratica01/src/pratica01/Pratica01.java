@@ -34,7 +34,9 @@ public class Pratica01 {
         contaArthur.deposita(500.0);
         contaManuela.saca(2500.0);
         contaArthur.imprimeDono();
+        contaManuela.deposita(600);
         contaArthur.devolveSaldo();
+        contaManuela.devolveSaldo();
     }
     
 }

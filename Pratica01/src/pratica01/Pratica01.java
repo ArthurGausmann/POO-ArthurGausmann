@@ -14,19 +14,27 @@ public class Pratica01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Conta contaArthur;
+        Conta contaArthur, contaManuela;
         contaArthur = new Conta();
+        contaManuela = new Conta();
         
         contaArthur.dono = "Arthur";
         contaArthur.saldo = 20000.0;
         contaArthur.numero = 12345;
         contaArthur.limite = 2000.0;
         
-        System.out.println("A conta do usuário " + contaArthur.dono + " possui saldo de R$" + contaArthur.saldo);
+        contaManuela.dono = "Manuela";
+        contaManuela.saldo = 50000.0;
+        contaManuela.numero = 67890;
+        contaManuela.limite = 4000.0;
+        
+        contaArthur.imprimeDados();
+        contaManuela.imprimeDados();
+        contaArthur.transferePara(contaManuela, 1500);
         contaArthur.deposita(500.0);
-        System.out.println("Foi depositado R$500.0 agora o saldo é R$" + contaArthur.saldo);
-        contaArthur.saca(1500.0);
-        System.out.println("Foi retirado R$1500.0 agora o saldo é R$" + contaArthur.saldo);
+        contaManuela.saca(2500.0);
+        contaArthur.imprimeDono();
+        contaArthur.devolveSaldo();
     }
     
 }

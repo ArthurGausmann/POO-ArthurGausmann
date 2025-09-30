@@ -10,10 +10,24 @@ package pratica01;
  */
 public class Conta {
     // Atributos
-    int numero;
-    String dono;
-    double saldo;
-    double limite;
+    private int numero;
+    private String dono;
+    private double saldo;
+    private double limite;
+    private static int numContas;
+    
+    // Construtores
+    public Conta(String dono, double saldo, double limite) {
+        this.dono = dono;
+        this.saldo = saldo;
+        this.limite = limite;
+        numContas++;
+        numero = numContas;
+    }
+    
+    public Conta(String dono) {
+        this(dono, 0, 0);
+    }
     
     // Métodos
     void deposita(double quantidade) {
@@ -22,7 +36,7 @@ public class Conta {
     }
     
     boolean saca(double valor) {
-        if (saldo < valor || limite < valor) {
+        if (saldo + limite < valor) {
             System.out.println("Não foi possível realizar o saque");
             return false;
         } else {
@@ -41,23 +55,21 @@ public class Conta {
     }
     
     boolean transferePara(Conta destino, double valor) {
-        if (saldo < valor || limite < valor) {
-            System.out.println("Não foi possível realizar a transferência");
-            return false;
-        } else {
+        if (saca(valor)) {
             destino.saldo += valor;
             saldo -= valor;
             System.out.println("Transferência de R$" + valor + " realizada com sucesso para " + destino.dono);
             return true;
+        } else {
+            System.out.println("Não foi possível realizar a transferência");
+            return false;
         }
     }
     
     void imprimeDados() {
-        System.out.println("------------------");
         System.out.println("Dono: " + dono);
-        System.out.println("Número: " + numero);
+        System.out.println("Número: " + numero + " (" + numContas + ")");
         System.out.println("Saldo: R$" + saldo);
-        System.out.println("Limite: R$" + limite);
-        System.out.println("------------------");
+        System.out.println("Limite: R$" + limite + "\n");
     }
 }

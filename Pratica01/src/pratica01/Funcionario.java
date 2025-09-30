@@ -10,12 +10,24 @@ package pratica01;
  */
 public class Funcionario {
     // Atributos
-    String nome;
-    String departamento;
-    double salario;
-    String dataEntrada;
-    String rg;
+    private String nome;
+    private String departamento;
+    private double salario;
+    private String dataEntrada;
+    private String rg;
+    private static int numFuncionarios;
     
+    // Construtores
+    public Funcionario(String nome, String departamento, double salario, String dataEntrada, String rg) {
+        this.nome = nome;
+        this.departamento = departamento;
+        this.salario = salario;
+        this.dataEntrada = dataEntrada;
+        this.rg = rg;
+        numFuncionarios++;
+    }
+    
+    // Métodos
     void recebeAumento(double aumento) {
         salario += aumento;
         System.out.println("O funcionário " + nome + " recebeu um aumento de R$" + aumento);
@@ -32,7 +44,6 @@ public class Funcionario {
         System.out.println("Departamento: " + departamento);
         System.out.println("Salário: R$" + salario);
         System.out.println("Data de entrada: " + dataEntrada);
-        System.out.println("RG: " + rg);
-        System.out.println("--------------");
+        System.out.println("RG: " + rg + "\n");
     }
 }

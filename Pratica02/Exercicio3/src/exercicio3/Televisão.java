@@ -23,4 +23,23 @@ public class Televisão {
     void aumentarVolume() {
         volume++;
     }
+    void diminuirVolume() {
+        volume--;
+    }
+    void aumentarCanal() {
+        canal++;
+    }
+    void diminuirCanal() {
+        canal--;
+    }
+    int trocarCanal(int num) {
+        return canal = num;
+    }
+    void mostrarVolume() {
+        System.out.println("Volume: " + volume);
+    }
+    void mostrarCanal() {
+        System.out.println("Canal: " + canal);
+    }
+    
 }

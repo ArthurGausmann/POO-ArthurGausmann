@@ -21,4 +21,22 @@ public class ControleRemoto {
     void aumentarVolume() {
         tv.aumentarVolume();
     }
+    void diminuirVolume() {
+        tv.diminuirVolume();
+    }
+    void aumentarCanal() {
+        tv.aumentarCanal();
+    }
+    void diminuirCanal() {
+        tv.diminuirCanal();
+    }
+    void trocarCanal(int num) {
+        tv.trocarCanal(num);
+    }
+    void mostrarVolume() {
+        tv.mostrarVolume();
+    }
+    void mostrarCanal() {
+        tv.mostrarCanal();
+    }
 }

@@ -28,8 +28,6 @@ public class Pessoa {
     }
     
     // Métodos
-
-    
     void setNome(String nome) {
         this.nome = nome;
     }

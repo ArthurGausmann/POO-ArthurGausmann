@@ -11,13 +11,13 @@ package pratica01;
 public class Conta {
     // Atributos
     private int numero;
-    private String dono;
+    private Pessoa dono;
     private double saldo;
     private double limite;
     private static int numContas;
     
     // Construtores
-    public Conta(String dono, double saldo, double limite) {
+    public Conta(Pessoa dono, double saldo, double limite) {
         this.dono = dono;
         this.saldo = saldo;
         this.limite = limite;
@@ -25,7 +25,7 @@ public class Conta {
         numero = numContas;
     }
     
-    public Conta(String dono) {
+    public Conta(Pessoa dono) {
         this(dono, 0, 0);
     }
     

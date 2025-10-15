@@ -16,11 +16,15 @@ public class Pessoa {
     private Data data;
     
     // Construtor
-    Pessoa (String nome, Endereço endereço, Telefone telefone, Data data) {
+    public Pessoa(String nome, Endereço endereço, Telefone telefone, Data data) {
         this.nome = nome;
-        this.endereço = endereço;
-        this.telefone = telefone;
-        this.data = data;
+        endereço = new Endereço();
+        telefone = new Telefone();
+        data = new Data();
+    }
+    
+    public Pessoa(String nome) {
+        this(nome, new Endereço(), new Telefone(), new Data());
     }
     
     // Métodos
@@ -30,5 +34,9 @@ public class Pessoa {
         endereço.getEndereço();
         telefone.getTelefone();
         data.getData();
+    }
+    
+    public void getNome() {
+        System.out.println(nome);
     }
 }

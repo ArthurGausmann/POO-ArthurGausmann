@@ -17,12 +17,16 @@ public class Endereço {
     private String estado;
     
     // Construtor
-    Endereço(String logradouro, String complemento, int cep, String cidade, String estado) {
+    public Endereço(String logradouro, String complemento, int cep, String cidade, String estado) {
         this.logradouro = logradouro;
         this.complemento = complemento;
         this.cep = cep;
         this.cidade = cidade;
         this.estado = estado;
+    }
+    
+    public Endereço() {
+        this("Rua sem nome", "Apto. 1000", 90120510, "Pelotas", "RS");
     }
     
     // Métodos

@@ -14,9 +14,13 @@ public class Telefone {
     private int numero;
 
     // Construtor
-    Telefone(int ddd, int numero) {
+    public Telefone(int ddd, int numero) {
         this.ddd = ddd;
         this.numero = numero;
+    }
+    
+    public Telefone() {
+        this(53, 990901515);
     }
     
     // Métodos

@@ -32,7 +32,8 @@ public class Conta {
     // Métodos
     void deposita(double quantidade) {
         saldo += quantidade;
-        System.out.println("Foi depositado R$" + quantidade + " à conta " + dono);
+        System.out.print("Foi depositado R$" + quantidade + " à conta ");
+        dono.getNome();
     }
     
     boolean saca(double valor) {
@@ -47,7 +48,8 @@ public class Conta {
     }
     
     void imprimeDono() {
-        System.out.println("O dono da conta é " + dono);
+        System.out.print("O dono da conta é ");
+        dono.getNome();
     }
     
     void devolveSaldo() {
@@ -58,7 +60,7 @@ public class Conta {
         if (saca(valor)) {
             destino.saldo += valor;
             saldo -= valor;
-            System.out.println("Transferência de R$" + valor + " realizada com sucesso para " + destino.dono);
+            System.out.println("Transferência de R$" + valor + " realizada com sucesso");
             return true;
         } else {
             System.out.println("Não foi possível realizar a transferência");
@@ -67,7 +69,8 @@ public class Conta {
     }
     
     void imprimeDados() {
-        System.out.println("Dono: " + dono);
+        System.out.print("Dono: ");
+        dono.getNome();
         System.out.println("Número: " + numero + " (" + numContas + ")");
         System.out.println("Saldo: R$" + saldo);
         System.out.println("Limite: R$" + limite + "\n");

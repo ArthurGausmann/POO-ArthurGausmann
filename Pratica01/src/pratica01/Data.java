@@ -13,12 +13,15 @@ public class Data {
     private int dia, mes, ano;
     
     // Construtor
-    Data(int dia, int mes, int ano) {
+    public Data(int dia, int mes, int ano) {
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
     }
     
+    public Data() {
+        this(1, 1, 2000);
+    }
     // Métodos
     void getData() {
         System.out.println("Data: " + dia + "/" + mes + "/" + ano);

@@ -14,9 +14,12 @@ public class Pratica01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Pessoa arthur, manuela;
+        arthur = new Pessoa("Arthur");
+        manuela = new Pessoa("Manuela");
         Conta contaArthur, contaManuela;
-        contaArthur = new Conta("Arthur", 20000, 2000);
-        contaManuela = new Conta("Manuela");
+        contaArthur = new Conta(arthur, 20000, 2000);
+        contaManuela = new Conta(manuela);
 
         contaArthur.imprimeDados();
         contaManuela.imprimeDados();

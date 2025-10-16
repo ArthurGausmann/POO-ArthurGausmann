@@ -19,12 +19,20 @@ public class BlocoDeNotas {
         l1.getLembrete();
         l2.getLembrete();
         l3.getLembrete();
+        l1.getData();
         
         BlocoDeLembretes bloco1 = new BlocoDeLembretes();
         
-        bloco1.setBlocoLembretes(l1);
-        bloco1.setBlocoLembretes(l2);
-        bloco1.setBlocoLembretes(l3);
+        bloco1.incluirLembrete(l1);
+        bloco1.incluirLembrete(l2);
+        bloco1.incluirLembrete(l3);
+        bloco1.numeroDeLembretes();
+        bloco1.listarLembretes();
+        
+        // bloco1.excluirLembrete(1); FIX
+        bloco1.numeroDeLembretes();
+        
+        bloco1.buscarLembretesPorData(d1);
     }
     
 }

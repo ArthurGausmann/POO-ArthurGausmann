@@ -27,16 +27,18 @@ public class Lembrete {
     
     // Métodos
     public void getLembrete() {
-        System.out.println("#####################");
         System.out.println("Nome lembrete: " + nome);
         System.out.print("Data: ");
         data.getData();
         System.out.println("----------------------");
-        System.out.println("Descrição: " + descricao);
-        System.out.println("#####################");
+        System.out.println("Descrição: " + descricao + "\n");
     }
     
     public void getNomeLembrete() {
         System.out.println("Nome: " + nome);
+    }
+    
+    public void getData() {
+        data.getData();
     }
 }

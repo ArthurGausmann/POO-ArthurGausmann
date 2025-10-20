@@ -29,10 +29,12 @@ public class BlocoDeNotas {
         bloco1.numeroDeLembretes();
         bloco1.listarLembretes();
         
-        // bloco1.excluirLembrete(1); FIX
-        bloco1.numeroDeLembretes();
+        // bloco1.buscarLembretesPorData(d1);
         
-        bloco1.buscarLembretesPorData(d1);
+        bloco1.excluirLembrete(1);
+        bloco1.numeroDeLembretes();
+        bloco1.listarLembretes();
+        
     }
     
 }

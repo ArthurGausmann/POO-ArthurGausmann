@@ -27,4 +27,5 @@ public class Data {
     public void getData() {
         System.out.println(dia + "/" + mes + "/" + ano);
     }
+
 }

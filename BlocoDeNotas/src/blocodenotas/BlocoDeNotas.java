@@ -19,21 +19,33 @@ public class BlocoDeNotas {
         l1.getLembrete();
         l2.getLembrete();
         l3.getLembrete();
-        l1.getData();
+        l2.getDataLembrete();
         
         BlocoDeLembretes bloco1 = new BlocoDeLembretes();
         
         bloco1.incluirLembrete(l1);
         bloco1.incluirLembrete(l2);
         bloco1.incluirLembrete(l3);
-        bloco1.numeroDeLembretes();
-        bloco1.listarLembretes();
+        bloco1.incluirLembrete(l3);
+        bloco1.incluirLembrete(l3);
+        bloco1.incluirLembrete(l3);
+        bloco1.incluirLembrete(l3);
+        bloco1.incluirLembrete(l3);
+        bloco1.incluirLembrete(l3);
+        bloco1.incluirLembrete(l3); // 9 - Limite atingido
+        bloco1.incluirLembrete(l3);
+        bloco1.incluirLembrete(l3);
+        bloco1.incluirLembrete(l3); // 12
+//        bloco1.numeroDeLembretes();
+//        bloco1.listarLembretes();
         
-        // bloco1.buscarLembretesPorData(d1);
+        bloco1.buscarLembretesPorData(d1);
         
-        bloco1.excluirLembrete(1);
-        bloco1.numeroDeLembretes();
-        bloco1.listarLembretes();
+        bloco1.buscarLembretesPorNome("POO");
+        
+//        bloco1.excluirLembrete(1);
+//        bloco1.numeroDeLembretes();
+//        bloco1.listarLembretes();
         
     }
     

@@ -12,7 +12,6 @@ public class BlocoDeLembretes {
     // Atributos
     private Lembrete[] lembretes; // Array de Lembrete
     private int numLembrete;
-    private static int countData;
 
     // Construtores
     public BlocoDeLembretes(int tamanho) {
@@ -27,9 +26,7 @@ public class BlocoDeLembretes {
     // Métodos    
     public void incluirLembrete(Lembrete lembrete) {
         if(numLembrete == lembretes.length) {
-            Lembrete[] lembretesAux = new Lembrete[(lembretes.length*2)];
-            System.arraycopy(lembretes, 0, lembretesAux, 0, lembretes.length);
-            lembretes = lembretesAux;
+            limiteArray(lembrete);
             System.out.println("Array redimensionado");
         }
         lembretes[numLembrete] = lembrete;
@@ -38,8 +35,15 @@ public class BlocoDeLembretes {
         System.out.println("Na posição " + numLembrete + " do Array");
         numLembrete++;
     }
+        
+    public BlocoDeLembretes limiteArray(Lembrete lembrete) {
+        BlocoDeLembretes blocoAux = new BlocoDeLembretes(lembretes.length * 2);
+        System.arraycopy(lembretes, 0, blocoAux.lembretes, 0, lembretes.length);
+        blocoAux.listarLembretes();
+        return blocoAux;
+    }
     
-    public void excluirLembrete(int a) { // FIX: Remoção correta dos lembretes da lista
+    public void excluirLembrete(int a) {
         if(a < 0 || a > lembretes.length) {
             System.out.println("Valor de índice inválido para remoção");
         } else {
@@ -64,16 +68,28 @@ public class BlocoDeLembretes {
         }
     }
     
-//    public void buscarLembretesPorData(Data data) {
-//        for(int i = 0; i < numLembrete; i++) {
-//            data.getData();
-//            lembretes[i].getNomeLembrete();
-//            lembretes[i].getData(); // FIX: Comparação com data
-////            if(data = lembretes[i].getData()) {
-////                lembretes[i].getNomeLembrete();
-////                countData++;
-////            }
-//        }
-//        System.out.println("Você possui " + countData + " lembretes para essa data");
-//    }
+    public void buscarLembretesPorData(Data dataCompara) {
+        int countData = 0;
+        System.out.print("\n-Lembretes na data: ");
+        dataCompara.getData();
+        for(int i = 0; i < numLembrete; i++) {
+            if(dataCompara.equals(lembretes[i].getDataLembrete())) {
+                lembretes[i].getNomeLembrete();
+                countData++;
+            }
+        }
+        System.out.println("Você possui " + countData + " lembretes para essa data");
+    }
+    
+    public void buscarLembretesPorNome(String nomeCompara) {
+        int countNome = 0;
+        System.out.println("\n-Lembretes de nome: " + nomeCompara);
+        for(int i = 0; i < numLembrete; i++) {
+            if(nomeCompara.equals(lembretes[i].getNomeLembrete())) {
+                lembretes[i].getNomeLembrete();
+                countNome++;
+            }
+        }
+        System.out.println("Você possui " + countNome + " lembretes para essa data");
+    }
 }

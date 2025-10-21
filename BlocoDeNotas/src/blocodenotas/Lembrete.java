@@ -34,11 +34,17 @@ public class Lembrete {
         System.out.println("Descrição: " + descricao + "\n");
     }
     
-    public void getNomeLembrete() {
+    public void printNomeLembrete() {
         System.out.println("Nome: " + nome);
     }
     
-    public void getData() {
-        data.getData();
+    public String getNomeLembrete() {
+        return nome;
     }
+    
+    public Data getDataLembrete() {
+        return data;
+    }
+    
+
 }

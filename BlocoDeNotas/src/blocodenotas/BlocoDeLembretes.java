@@ -26,7 +26,7 @@ public class BlocoDeLembretes {
     // Métodos    
     public void incluirLembrete(Lembrete lembrete) {
         if(numLembrete == lembretes.length) {
-            limiteArray(lembrete);
+            lembretes = limiteArray(lembrete);
             System.out.println("Array redimensionado");
         }
         lembretes[numLembrete] = lembrete;
@@ -36,11 +36,12 @@ public class BlocoDeLembretes {
         numLembrete++;
     }
         
-    public BlocoDeLembretes limiteArray(Lembrete lembrete) {
-        BlocoDeLembretes blocoAux = new BlocoDeLembretes(lembretes.length * 2);
-        System.arraycopy(lembretes, 0, blocoAux.lembretes, 0, lembretes.length);
-        blocoAux.listarLembretes();
-        return blocoAux;
+    public Lembrete[] limiteArray(Lembrete lembrete) {
+        Lembrete[] lembretesAux = new Lembrete[(lembretes.length * 2)];
+        for(int i = 0; i < lembretes.length; i++) {
+            lembretesAux[i] = lembretes[i];
+        }
+        return lembretesAux;
     }
     
     public void excluirLembrete(int a) {

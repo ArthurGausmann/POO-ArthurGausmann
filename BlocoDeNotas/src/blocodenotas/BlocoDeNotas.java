@@ -34,15 +34,16 @@ public class BlocoDeNotas {
         bloco1.incluirLembrete(l3);
         bloco1.incluirLembrete(l3); // 9 - Limite atingido
         bloco1.incluirLembrete(l3);
-        bloco1.incluirLembrete(l3);
+        bloco1.incluirLembrete(l3); 
+        bloco1.incluirLembrete(l3); 
         bloco1.incluirLembrete(l3); // 12
 //        bloco1.numeroDeLembretes();
 //        bloco1.listarLembretes();
         
-        bloco1.buscarLembretesPorData(d1);
-        
-        bloco1.buscarLembretesPorNome("POO");
-        
+//        bloco1.buscarLembretesPorData(d1);
+//        
+//        bloco1.buscarLembretesPorNome("POO");
+//        
 //        bloco1.excluirLembrete(1);
 //        bloco1.numeroDeLembretes();
 //        bloco1.listarLembretes();

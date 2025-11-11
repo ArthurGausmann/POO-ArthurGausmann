@@ -9,5 +9,8 @@ package blocodenotas;
  * @author arthurg5
  */
 public class LembretesApp {
+    // Atributos
+    private BlocoDeLembretes blocoLembretes;
+    
     
 }

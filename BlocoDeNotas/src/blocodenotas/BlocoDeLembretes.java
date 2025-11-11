@@ -26,8 +26,8 @@ public class BlocoDeLembretes {
     // Métodos    
     public void incluirLembrete(Lembrete lembrete) {
         if(numLembrete == lembretes.length) {
-            lembretes = limiteArray(lembrete);
-            System.out.println("Array redimensionado");
+            lembretes = limiteArray();
+            System.out.println("--Array redimensionado--");
         }
         lembretes[numLembrete] = lembrete;
         System.out.print("Lembrete adicionado - ");
@@ -36,7 +36,7 @@ public class BlocoDeLembretes {
         numLembrete++;
     }
         
-    public Lembrete[] limiteArray(Lembrete lembrete) {
+    public Lembrete[] limiteArray() {
         Lembrete[] lembretesAux = new Lembrete[(lembretes.length * 2)];
         for(int i = 0; i < lembretes.length; i++) {
             lembretesAux[i] = lembretes[i];

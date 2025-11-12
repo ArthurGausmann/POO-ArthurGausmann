@@ -12,11 +12,15 @@ public class JogoBatalha {
     
     public static void main(String[] args) {
         Guerreiro guerreiro1 = new Guerreiro("Theodore");
-        Guerreiro guerreiro2 = new Guerreiro("Sophyst");
+        Guerreiro guerreiro2 = new Guerreiro("Sisyphus");
+        Arqueiro arqueiro1 = new Arqueiro("Légolas");
+        Mago mago1 = new Mago("Harry");
         
         guerreiro1.imprimirStatus();
-        guerreiro1.atacar(guerreiro2);
-        guerreiro2.imprimirStatus();
+        arqueiro1.imprimirStatus();
+        mago1.imprimirStatus();
+
+        Batalha.duelar(mago1, guerreiro1);
     }
     
 }

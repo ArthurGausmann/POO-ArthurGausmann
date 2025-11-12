@@ -28,28 +28,31 @@ abstract class Personagem {
         System.out.println("|Nome: " + nome);
         System.out.println("|Ataque: " + ataque);
         System.out.println("|Defesa: " + defesa);
-        System.out.println("|Saude: " + saude);
+        System.out.println("|Saude: " + saude + "\n");
     };
     
     abstract void atacar(Personagem inimigo);
     
     String getNome() {
-        return this.nome;
+        return nome;
     }
     
     int getAtaque() {
-        return this.ataque;
+        return ataque;
     }
     
     int getDefesa() {
-        return this.defesa;
+        return defesa;
     }
     
     int getSaude() {
-        return this.saude;
+        return saude;
     }
     
-    int setSaude(int saude) {
-        return this.saude = saude;
+    void recebeDano(int dano) {
+        this.saude -= dano;
+        if (saude < 0) {
+            saude = 0;
+        }
     }
 }

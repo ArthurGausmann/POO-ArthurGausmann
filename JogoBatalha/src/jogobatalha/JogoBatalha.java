@@ -21,6 +21,7 @@ public class JogoBatalha {
         mago1.imprimirStatus();
 
         Batalha.duelar(mago1, guerreiro1);
+        Batalha.duelar(guerreiro2, arqueiro1);
     }
     
 }

@@ -34,7 +34,8 @@ public class Arqueiro extends Personagem {
             int dano = getAtaque() - inimigo.getDefesa();
             if (dano > 0 || inimigo.getSaude() == 0) {
                 inimigo.recebeDano(dano);
-                System.out.println(getNome() + " deu " + dano + " de dano em " + inimigo.getNome() + " que ficou com " + inimigo.getSaude() + " de saúde!");
+                System.out.println(getNome() + " deu " + dano + " de dano em " + inimigo.getNome() + 
+                        " que ficou com " + inimigo.getSaude() + " de saúde!");
             } else {
                 System.out.println("Ataque não surtiu efeito!");
             }

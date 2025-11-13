@@ -24,7 +24,7 @@ public class Guerreiro extends Personagem {
     @Override
     void atacar(Personagem inimigo) {
         int dano = (getAtaque() + 2) - inimigo.getDefesa();
-        if (dano > 0 || inimigo.getSaude() == 0) {
+        if (dano > 0 || inimigo.getSaude() != 0) {
             inimigo.recebeDano(dano);
             System.out.println(getNome() + " deu " + dano + " de dano em " + inimigo.getNome() + 
                     " que ficou com " + inimigo.getSaude() + " de saúde!");
